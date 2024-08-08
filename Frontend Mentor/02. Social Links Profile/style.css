@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+## Colors
+- Green: hsl(75, 94%, 57%)
+
+- White: hsl(0, 0%, 100%)
+
+- Grey 700: hsl(0, 0%, 20%)
+- Grey 800: hsl(0, 0%, 12%)
+- Grey 900: hsl(0, 0%, 8%)
+*/
+
+/* 
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+*/
+
+/* 
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 600, 700
+
+    font-family: "Inter", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+body {
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-family: "Inter", sans-serif;
+    font-style: normal;    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body p {
+    font-size: 14px;
+}
+
+.container {
+    width: 25%;
+    background-color: hsl(0, 0%, 12%);    
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#name {
+    margin-top: 20px;
+}
+
+#location {
+    margin-top: 10px;    
+    color: hsl(75, 94%, 57%);
+    font-weight: 600;
+}
+
+#user-bio {
+    margin-top: 20px;
+}
+
+.links-container {
+    padding-top: 15px;
+}
+
+.links-container a {
+    width: 100%;
+    display: block;
+    background-color: hsl(0, 0%, 20%);
+    color:hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 15px auto;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.links-container a:focus,
+.links-container a:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 12%);
+    font-weight: 700;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(75, 94%, 57%);
+}
+
+@media screen and (max-width: 1025px) {
+    .container {
+        width: 40%;
+    }
+
+    .links-container a {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .container {
+        width: 80%;
+        margin: 50px 15px;
+    }
+
+    .attribution {
+        font-size: 10px;
+    }
+}
