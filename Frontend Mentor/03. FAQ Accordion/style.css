@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light pink: hsl(275, 100%, 97%)
+- Grayish purple: hsl(292, 16%, 49%)
+- Dark purple: hsl(292, 42%, 14%)
+*/
+
+/* 
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 16px
+
+### Font
+
+- Family: [Work Sans](https://fonts.google.com/specimen/Work+Sans)
+- Weights: 400, 600, 700
+
+    font-family: "Work Sans", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+body {
+    background-color: hsl(275, 100%, 97%);
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;   
+}
+
+.svg-container {
+    height: 35vh;
+    overflow: hidden;    
+}
+
+.svg-container img {
+    width: 100%;
+}
+
+.wrapper {        
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    transform: translateY(-12%);    
+}
+
+.container {
+    width: 32%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.star-svg-container {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.star-svg-container svg {
+    margin-right: 15px;
+}
+
+.main-header {
+    display: inline-block;
+    font-size: 3rem;
+    transform: translateY(-10%);
+    color: hsl(292, 42%, 14%)
+}
+
+.box {
+    margin: 20px 0;
+}
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question {
+    color:hsl(292, 42%, 14%);
+}
+
+.question:hover {
+    cursor: pointer;
+    color:rgb(193, 55, 193);
+}
+
+.plus, .minus {
+    cursor: pointer;
+}
+
+.answer {
+    visibility: visible;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: hsl(292, 16%, 49%);
+}
+
+.hidden {
+    display: none;
+}
+
+.breakline {
+    border: 1px solid hsl(292, 16%, 49%);
+    opacity: 0.1;
+}
+
+.attribution {    
+    width: 100%;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1025px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .wrapper {
+        transform: translateY(-25%);
+    }
+
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .wrapper {
+        transform: translateY(-20%);
+    }
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .wrapper {
+        transform: translateY(-20%);
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .container {
+        width: 90%;
+    }
+
+    .wrapper {
+        transform: translateY(-20%);
+    }
+}
