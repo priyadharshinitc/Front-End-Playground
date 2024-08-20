@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* 
+## Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+*/
+
+/* 
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 18px
+
+### Font
+
+- Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
+- Weights: 500, 700, 800
+
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+:root {
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* (background) */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue : hsl(241, 81%, 54%);
+
+    /* (circle) */
+    --violet-blue : hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0.029);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 35%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 30px hsl(224, 59%, 78%);
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    height: 50%;
+}
+
+.result-container {
+    width: 50%;
+    border-radius: 20px;
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-header {
+    color: var(--light-lavender);
+}
+
+.score {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+#your-score {
+    font-size: 3rem;
+    color:var(--white);
+}
+
+.score h6 {
+    color: hsla(241, 100%, 89%, 0.529);
+    font-size: 0.8em;
+}
+
+.result-container h2 {
+    color:var(--white);
+    font-weight: 500;
+}
+
+.result-container p {
+    font-size: 12px;
+    color:var(--light-lavender);
+    line-height: 1.3em;
+    word-spacing: 0.2em;
+    padding: 15px;
+}
+
+.summary-container {
+    width: 50%;
+    padding: 25px;
+}
+
+.summary-header {
+    padding-bottom: 25px;
+    color:var(--dark-gray-blue);
+}
+
+.wrapper {
+    display: flex;
+}
+
+.symbol {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    transform: translateY(18%);
+}
+
+.summary-container ul {
+    list-style: none;
+}
+
+.summary-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-item:nth-child(1) {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-item:nth-child(2) {
+    color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary-item:nth-child(3) {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary-item:nth-child(4) {
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.title {    
+    font-size: 14px;    
+}
+
+.score-wrapper {
+    font-size: 14px;
+    color: hsla(242, 46%, 66%, 0.9);
+    font-weight: 700;
+}
+
+.acquired-score {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    margin: 25px 0;
+    outline: none;
+    border: none;
+}
+
+button:hover, 
+button:focus {
+    cursor: pointer;
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 25px;
+    font-size: 16px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: var(--cobalt-blue); 
+}
+
+@media screen and (max-width: 1025px) {
+    main {
+        width: 45%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    main {
+        width: 65%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100vh;
+    }
+
+    main {
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 95%;
+        box-shadow: none;
+    }
+
+    .result-container {
+        width: 100%;
+        height: 50%;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .score {
+        margin: 10px auto;
+        width: 125px;
+        height: 125px;
+    }
+
+    #your-score {
+        font-size: 2rem;
+    }
+
+    .summary-container {
+        width: 80%;
+        height: 50%;
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    button {
+        margin: 5px 0;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        height: 10px;
+        font-size: 12px; 
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #your-score {
+        font-size: 2.5rem;
+    }
+}
